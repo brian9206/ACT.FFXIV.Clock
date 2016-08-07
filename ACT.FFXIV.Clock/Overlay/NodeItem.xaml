@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="ACT.FFXIV.Clock.NodeItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ACT.FFXIV.Clock"
+             mc:Ignorable="d" Background="#01000000" MouseLeftButtonUp="UserControl_MouseLeftButtonUp">
+    <UserControl.Resources>
+        <Style TargetType="{x:Type local:OutlinedTextBlock}">
+            <Style.Setters>
+                <Setter Property="Fill" Value="#f1c40f" />
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="FontFamily" Value="Verdana,Geneva,Tahoma,sans-serif" />
+                <Setter Property="StrokeThickness" Value="0.25" />
+                <Setter Property="FontWeight" Value="Bold" />
+                <Setter Property="HorizontalAlignment" Value="Right" />
+            </Style.Setters>
+            <Style.Triggers>
+                <Trigger Property="Tag" Value="Active">
+                    <Setter Property="Fill" Value="Red" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+
+    <local:OutlinedTextBlock x:Name="TextUI" Text="Text" />
+</UserControl>
